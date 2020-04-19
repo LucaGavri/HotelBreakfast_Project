@@ -50,3 +50,21 @@ drinkMin.addEventListener('click', function (e) {
     sectionMealsDetails.style.display = 'flex';
     drinkMax.style.display = 'flex';
 });
+
+
+//cart open/hiding
+const showCart = document.querySelector('.showCart');
+const hideCart = document.querySelector('.hideCart');
+const sectionCart = document.querySelector('.sectionCart');
+
+
+showCart.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionCart.style.left = '0';
+});
+
+hideCart.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionCart.style.left = '100vw';
+});
+
