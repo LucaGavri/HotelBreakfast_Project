@@ -53,12 +53,13 @@ section{
   width: 100vw;
 
   .sectionMain{
-    margin-top: 60px;
+    margin: 65px 0 0 0;
     width: 100%;
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 95px);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .sectionMealsMiniatures{
       border: 1px solid red;
@@ -97,10 +98,12 @@ section{
         background-image: url("../images/drink.jpg");
         background-size: contain;
       }
+
       .mini{
         margin: 20px;
         width: 300px;
         height: 200px;
+        border-radius: 5px;
         box-shadow: 2px 2px 8px #444;
         color: white;
         font-size: 16px;
@@ -111,6 +114,7 @@ section{
           content: 'click for details';
           width: 100%;
           height: 100%;
+          border-radius: 5px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -122,6 +126,119 @@ section{
 
         &:hover:after{
           opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .sectionMealsDetails{
+    width: 100%;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top: 65px;
+    left: 0;
+    background-color: rgba(68, 68, 68, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    .cerealsMax{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .scrambledEggsMax{
+      display: none;
+    }
+
+    .friedEggMax{
+      display: none;
+    }
+
+    .pancakesMax{
+      display: none;
+    }
+
+    .cottageCheeseMax{
+      display: none;
+    }
+
+    .drinkMax{
+      display: none;
+    }
+
+    .maxi{
+      width: 80%;
+      height: 80%;
+      background-color: #fff;
+      border-radius: 5px;
+      position: relative;
+
+      i{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #036000;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .imgAndDescription{
+        overflow-y: scroll;
+        padding: 20px;
+
+        img{
+          width: 300px;
+          height: 200px;
+          float: left;
+          margin: 0 30px 30px 0;
+        }
+
+        h3{
+          margin: 0;
+          color: #036000;
+          font-size: 22px;
+        }
+
+        p{
+          margin: 0;
+        }
+      }
+
+      .order{
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .quantity{
+
+          #number{
+            margin-left: 10px;
+            height: 25px;
+            width: 70px;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+          }
+        }
+
+        .orderBtn{
+          margin-top: 10px;
+          width: 120px;
+          height: 40px;
+          background-color: #036000;
+          border-radius: 5px;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
         }
       }
     }
