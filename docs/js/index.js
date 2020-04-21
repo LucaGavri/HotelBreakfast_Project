@@ -111,3 +111,162 @@ hideCart.addEventListener('click', function (e) {
     sectionCart.style.left = '100vw';
 });
 
+//meals counters
+const numberCerealsInput = document.querySelector('.numberCerealsInput');
+const numberScrambledEggsInput = document.querySelector('.numberScrambledEggsInput');
+const numberFriedEggInput = document.querySelector('.numberFriedEggInput');
+const numberPancakesInput = document.querySelector('.numberPancakesInput');
+const numberCottageCheeseInput = document.querySelector('.numberCottageCheeseInput');
+const numberBlackTeaInput = document.querySelector('.numberBlackTeaInput');
+const numberGreenTeaInput = document.querySelector('.numberGreenTeaInput');
+const numberCoffeeInput = document.querySelector('.numberCoffeeInput');
+const numberCocoaInput = document.querySelector('.numberCocoaInput');
+const numberWaterInput = document.querySelector('.numberWaterInput');
+const numberRedWineInput = document.querySelector('.numberRedWineInput');
+const numberWhiteWineInput = document.querySelector('.numberWhiteWineInput');
+
+const cerealsPlus = document.querySelector('.cerealsPlus');
+const cerealsMinus = document.querySelector('.cerealsMinus');
+const scrambledEggsPlus = document.querySelector('.scrambledEggsPlus');
+const scrambledEggsMinus = document.querySelector('.scrambledEggsMinus');
+const friedEggPlus = document.querySelector('.friedEggPlus');
+const friedEggMinus = document.querySelector('.friedEggMinus');
+const pancakesPlus = document.querySelector('.pancakesPlus');
+const pancakesMinus = document.querySelector('.pancakesMinus');
+const cottageCheesePlus = document.querySelector('.cottageCheesePlus');
+const cottageCheeseMinus = document.querySelector('.cottageCheeseMinus');
+
+const blackTeaPlus = document.querySelector('.blackTeaPlus');
+const blackTeaMinus = document.querySelector('.blackTeaMinus');
+const greenTeaPlus = document.querySelector('.greenTeaPlus');
+const greenTeaMinus = document.querySelector('.greenTeaMinus');
+const coffeePlus = document.querySelector('.coffeePlus');
+const coffeeMinus = document.querySelector('.coffeeMinus');
+const cocoaPlus = document.querySelector('.cocoaPlus');
+const cocoaMinus = document.querySelector('.cocoaMinus');
+const waterPlus = document.querySelector('.waterPlus');
+const waterMinus = document.querySelector('.waterMinus');
+const redWinePlus = document.querySelector('.redWinePlus');
+const redWineMinus = document.querySelector('.redWineMinus');
+const whiteWinePlus = document.querySelector('.whiteWinePlus');
+const whiteWineMinus = document.querySelector('.whiteWineMinus');
+
+cerealsPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCerealsInput.stepUp(1);
+});
+cerealsMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCerealsInput.stepDown(1);
+});
+
+scrambledEggsPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberScrambledEggsInput.stepUp(1);
+});
+scrambledEggsMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberScrambledEggsInput.stepDown(1);
+});
+
+friedEggPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberFriedEggInput.stepUp(1);
+});
+friedEggMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberFriedEggInput.stepDown(1);
+});
+
+pancakesPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberPancakesInput.stepUp(1);
+});
+pancakesMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberPancakesInput.stepDown(1);
+});
+
+cottageCheesePlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCottageCheeseInput.stepUp(1);
+});
+cottageCheeseMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCottageCheeseInput.stepDown(1);
+});
+
+blackTeaPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberBlackTeaInput.stepUp(1);
+});
+blackTeaMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberBlackTeaInput.stepDown(1);
+});
+
+greenTeaPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberGreenTeaInput.stepUp(1);
+});
+greenTeaMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberGreenTeaInput.stepDown(1);
+});
+
+coffeePlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCoffeeInput.stepUp(1);
+});
+coffeeMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCoffeeInput.stepDown(1);
+});
+
+cocoaPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCocoaInput.stepUp(1);
+});
+cocoaMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCocoaInput.stepDown(1);
+});
+
+waterPlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberWaterInput.stepUp(1);
+});
+waterMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberWaterInput.stepDown(1);
+});
+
+redWinePlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberRedWineInput.stepUp(1);
+});
+
+cottageCheesePlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCottageCheeseInput.stepUp(1);
+});
+cottageCheeseMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberCottageCheeseInput.stepDown(1);
+});
+redWineMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberRedWineInput.stepDown(1);
+});
+
+whiteWinePlus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberWhiteWineInput.stepUp(1);
+});
+whiteWineMinus.addEventListener('click', function (e) {
+    (e).preventDefault();
+    numberWhiteWineInput.stepDown(1);
+});
+
+
+
