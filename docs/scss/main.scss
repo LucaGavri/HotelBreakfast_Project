@@ -49,10 +49,10 @@ header {
   }
 }
 
-section{
+section {
   width: 100vw;
 
-  .sectionMain{
+  .sectionMain {
     margin: 65px 0 0 0;
     width: 100%;
     min-height: calc(100vh - 95px);
@@ -61,44 +61,44 @@ section{
     align-items: center;
     position: relative;
 
-    .sectionMealsMiniatures{
+    .sectionMealsMiniatures {
       width: 90%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
 
-      .cerealsMin{
+      .cerealsMin {
         background-image: url("../images/cereals.jpeg");
         background-size: contain;
       }
 
-      .scrambledEggsMin{
+      .scrambledEggsMin {
         background-image: url("../images/scrambledEggs.jpg");
         background-size: contain;
       }
 
-      .friedEggMin{
+      .friedEggMin {
         background-image: url("../images/friedEgg.jpeg");
         background-size: contain;
       }
 
-      .pancakesMin{
+      .pancakesMin {
         background-image: url("../images/pancakes.jpeg");
         background-size: contain;
       }
 
-      .cottageCheeseMin{
+      .cottageCheeseMin {
         background-image: url("../images/cottageCheese.jpg");
         background-size: contain;
       }
 
-      .drinkMin{
+      .drinkMin {
         background-image: url("../images/drink.jpg");
         background-size: contain;
       }
 
-      .mini{
+      .mini {
         margin: 20px;
         width: 300px;
         height: 200px;
@@ -109,7 +109,7 @@ section{
         position: relative;
         cursor: pointer;
 
-        &:after{
+        &:after {
           content: 'click for details';
           width: 100%;
           height: 100%;
@@ -123,14 +123,14 @@ section{
           transition: 0.5s all;
         }
 
-        &:hover:after{
+        &:hover:after {
           opacity: 0.8;
         }
       }
     }
   }
 
-  .sectionMealsDetails{
+  .sectionMealsDetails {
     width: 100%;
     height: calc(100vh - 65px);
     position: fixed;
@@ -142,56 +142,99 @@ section{
     align-items: center;
     z-index: 3;
 
-    .cerealsMax{
+    .cerealsMax {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
 
-    .scrambledEggsMax{
+    .scrambledEggsMax {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
 
-    .friedEggMax{
+    .friedEggMax {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
 
-    .pancakesMax{
+    .pancakesMax {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
 
-    .cottageCheeseMax{
+    .cottageCheeseMax {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
     }
 
-    .drinkMax{
+    .drinkMax {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+
+      .imgAndDescription {
+
+        .descriptionDrink {
+          width: 170px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+
+          .numberDrink {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+
+              input {
+                width: 30px;
+              }
+            }
+
+            .numberPlusMinus{
+              width: 40px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .numberPlus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+
+              .numberMinus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+            }
+          }
+        }
+      }
     }
 
-    .maxi{
+    .maxi {
       width: 80%;
       height: 80%;
       background-color: #fff;
       border-radius: 5px;
       position: relative;
 
-      i{
+      i {
         position: absolute;
         right: 10px;
         top: 10px;
@@ -200,40 +243,31 @@ section{
         cursor: pointer;
       }
 
-      .imgAndDescription{
+      .imgAndDescription {
         overflow-y: scroll;
         padding: 20px;
         width: calc(100% - 40px);
 
 
-        img{
+        img {
+          float: left;
           width: 300px;
           height: 200px;
-          float: left;
           margin: 0 30px 30px 0;
         }
 
-        h3{
+        h3 {
           margin: 0;
           color: #036000;
           font-size: 22px;
         }
 
-        p{
+        p {
           margin: 0;
-        }
-
-        .number{
-          margin-left: 10px;
-          height: 25px;
-          width: 70px;
-          border-radius: 5px;
-          background-color: #fff;
-          cursor: pointer;
         }
       }
 
-      .order{
+      .order {
         padding: 10px;
         width: 100%;
         display: flex;
@@ -241,19 +275,43 @@ section{
         justify-content: center;
         align-items: center;
 
-        .quantity{
+        .quantity {
+          width: 150px;
 
-          .number{
-            margin-left: 10px;
-            height: 25px;
-            width: 70px;
-            border-radius: 5px;
-            background-color: #fff;
-            cursor: pointer;
+          .number {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+
+              input {
+                width: 30px;
+              }
+            }
+
+            .numberPlusMinus{
+              width: 40px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .numberPlus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+
+              .numberMinus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+            }
           }
         }
 
-        .orderBtn{
+        .orderBtn {
           margin-top: 10px;
           width: 120px;
           height: 40px;
@@ -269,7 +327,7 @@ section{
     }
   }
 
-  .sectionCart{
+  .sectionCart {
     width: 100vw;
     height: calc(100vh - 65px);
     position: fixed;
@@ -282,7 +340,7 @@ section{
     z-index: 2;
     transition: 1s all;
 
-    .showCart{
+    .showCart {
       position: absolute;
       width: 40px;
       height: 40px;
@@ -298,12 +356,12 @@ section{
       color: #fff;
       transition: 0.5s all;
 
-      &:hover{
+      &:hover {
         color: #444;
       }
     }
 
-    .hideCart{
+    .hideCart {
       position: absolute;
       width: 40px;
       height: 40px;
@@ -317,16 +375,16 @@ section{
       color: #fff;
       transition: 0.5s all;
 
-      &:hover{
+      &:hover {
         color: #444;
       }
 
-      i{
+      i {
         font-size: 30px;
       }
     }
 
-    .mainCart{
+    .mainCart {
       height: 80%;
       width: 80%;
       display: flex;
@@ -337,18 +395,18 @@ section{
       border-radius: 10px;
       overflow-y: scroll;
 
-      h3{
+      h3 {
         color: #036000;
       }
 
-      .toOrderCart{
+      .toOrderCart {
 
-        p{
+        p {
           display: flex;
           justify-content: center;
           align-items: center;
 
-          i{
+          i {
             margin-left: 10px;
             font-size: 20px;
             color: #af0000;
@@ -357,7 +415,7 @@ section{
         }
       }
 
-      .orderFinalBtn{
+      .orderFinalBtn {
         margin: 10px;
         width: 110px;
         height: 35px;
@@ -371,7 +429,7 @@ section{
         cursor: pointer;
         transition: 0.5s all;
 
-        &:hover{
+        &:hover {
           color: #036000;
           background-color: #fff;
           border: 3px solid #036000;
@@ -380,9 +438,6 @@ section{
     }
   }
 }
-
-
-
 
 
 .footer {

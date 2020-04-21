@@ -51,6 +51,49 @@ drinkMin.addEventListener('click', function (e) {
     drinkMax.style.display = 'flex';
 });
 
+//meal show hiding
+const cerealsMaxQuit = document.querySelector('.cerealsMaxQuit');
+const scrambledEggsMaxQuit = document.querySelector('.scrambledEggsMaxQuit');
+const friedEggMaxQuit = document.querySelector('.friedEggMaxQuit');
+const pancakesMaxQuit = document.querySelector('.pancakesMaxQuit');
+const cottageCheeseMaxQuit = document.querySelector('.cottageCheeseMaxQuit');
+const drinkMaxQuit = document.querySelector('.drinkMaxQuit');
+
+cerealsMaxQuit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionMealsDetails.style.display = 'none';
+    cerealsMax.style.display = 'none';
+});
+
+scrambledEggsMaxQuit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionMealsDetails.style.display = 'none';
+    scrambledEggsMax.style.display = 'none';
+});
+
+friedEggMaxQuit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionMealsDetails.style.display = 'none';
+    friedEggMax.style.display = 'none';
+});
+
+pancakesMaxQuit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionMealsDetails.style.display = 'none';
+    pancakesMax.style.display = 'none';
+});
+
+cottageCheeseMaxQuit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionMealsDetails.style.display = 'none';
+    cottageCheeseMax.style.display = 'none';
+});
+
+drinkMaxQuit.addEventListener('click', function (e) {
+    e.preventDefault();
+    sectionMealsDetails.style.display = 'none';
+    drinkMax.style.display = 'none';
+});
 
 //cart open/hiding
 const showCart = document.querySelector('.showCart');

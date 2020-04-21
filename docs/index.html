@@ -33,7 +33,7 @@
         </div>
         <div class="sectionMealsDetails">
             <div class="cerealsMax maxi">
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle cerealsMaxQuit"></i>
                 <div class="imgAndDescription">
                     <img src="./images/cereals.jpeg"/>
                     <div class="description">
@@ -48,21 +48,22 @@
                 </div>
                 <div class="order">
                     <div class="quantity">
-                        <label for="numberCereals">quantity: </label>
-                        <select id="numberCereals" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="number">
+                            <p>
+                                quantity:
+                                <input class="numberCerealsInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus cerealsPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus cerealsMinus"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="orderBtn">Add to cart</div>
                 </div>
             </div>
             <div class="scrambledEggsMax maxi">
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle scrambledEggsMaxQuit"></i>
                 <div class="imgAndDescription">
                     <img src="./images/scrambledEggs.jpg"/>
                     <div class="description">
@@ -77,21 +78,22 @@
                 </div>
                 <div class="order">
                     <div class="quantity">
-                        <label for="numberScrambledEggs">quantity: </label>
-                        <select id="numberScrambledEggs" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="number">
+                            <p>
+                                quantity:
+                                <input class="numberScrambledEggsInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus scrambledEggsPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus scrambledEggsMinus"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="orderBtn">Add to cart</div>
                 </div>
             </div>
             <div class="friedEggMax maxi">
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle friedEggMaxQuit"></i>
                 <div class="imgAndDescription">
                     <img src="./images/friedEgg.jpeg"/>
                     <div class="description">
@@ -106,21 +108,22 @@
                 </div>
                 <div class="order">
                     <div class="quantity">
-                        <label for="numberFriedEgg">quantity: </label>
-                        <select id="numberFriedEgg" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="number">
+                            <p>
+                                quantity:
+                                <input class="numberFriedEggInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus friedEggPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus friedEggMinus"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="orderBtn">Add to cart</div>
                 </div>
             </div>
             <div class="pancakesMax maxi">
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle pancakesMaxQuit"></i>
                 <div class="imgAndDescription">
                     <img src="./images/pancakes.jpeg"/>
                     <div class="description">
@@ -135,21 +138,22 @@
                 </div>
                 <div class="order">
                     <div class="quantity">
-                        <label for="numberPancakes">quantity: </label>
-                        <select id="numberPancakes" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="number">
+                            <p>
+                                quantity:
+                                <input class="numberPancakesInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus pancakesPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus pancakesMinus"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="orderBtn">Add to cart</div>
                 </div>
             </div>
             <div class="cottageCheeseMax maxi">
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle cottageCheeseMaxQuit"></i>
                 <div class="imgAndDescription">
                     <img src="./images/cottageCheese.jpg"/>
                     <div class="description">
@@ -164,95 +168,101 @@
                 </div>
                 <div class="order">
                     <div class="quantity">
-                        <label for="numberCottageCheese">quantity: </label>
-                        <select id="numberCottageCheese" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                        <div class="number">
+                            <p>
+                                quantity:
+                                <input class="numberCottageCheeseInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus cottageCheesePlus"></i>
+                                <i class="fas fa-minus-circle numberMinus cottageCheeseMinus"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="orderBtn">Add to cart</div>
                 </div>
             </div>
             <div class="drinkMax maxi">
-                <i class="far fa-times-circle"></i>
+                <i class="far fa-times-circle drinkMaxQuit"></i>
                 <div class="imgAndDescription">
                     <img src="./images/drink.jpg"/>
-                    <div class="description">
-                        <label for="numberBlackTea">Black tea: </label>
-                        <select id="numberBlackTea" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
-                        <label for="numberGreenTea">Green tea: </label>
-                        <select id="numberGreenTea" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
+                    <div class="descriptionDrink">
+                        <div class="numberDrink">
+                            <p>
+                            Black Tea:
+                                <input class="numberBlackTeaInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus BlackTeaPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus BlackTeaMinus"></i>
+                            </div>
+                        </div>
 
-                        <label for="numberCoffee">Coffee: </label>
-                        <select id="numberCoffee" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
-                        <label for="numberCocoa">Cocoa: </label>
-                        <select id="numberCocoa" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
-                        <label for="numberWater">Water: </label>
-                        <select id="numberWater" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
-                        <label for="numberWhiteWine">White wine: </label>
-                        <select id="numberWhiteWine" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
-                        <label for="numberRedWine">Red wine: </label>
-                        <select id="numberRedWine" class="number">
-                            <option value="">choose</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </br>
+                        <div class="numberDrink">
+                            <p>
+                                Green Tea:
+                                <input class="numberGreenTeaInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus GreenTeaPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus GreenTeaMinus"></i>
+                            </div>
+                        </div>
+
+                        <div class="numberDrink">
+                            <p>
+                                Coffee:
+                                <input class="numberCoffeeInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus CoffeePlus"></i>
+                                <i class="fas fa-minus-circle numberMinus CoffeeMinus"></i>
+                            </div>
+                        </div>
+
+                        <div class="numberDrink">
+                            <p>
+                                Cocoa:
+                                <input class="numberCocoaInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus CocoaPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus CocoaMinus"></i>
+                            </div>
+                        </div>
+
+                        <div class="numberDrink">
+                            <p>
+                                Water:
+                                <input class="numberWaterInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus WaterPlus"></i>
+                                <i class="fas fa-minus-circle numberMinus WaterMinus"></i>
+                            </div>
+                        </div>
+
+                        <div class="numberDrink">
+                            <p>
+                                Red wine:
+                                <input class="numberRedWineInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus RedWinePlus"></i>
+                                <i class="fas fa-minus-circle numberMinus RedWineMinus"></i>
+                            </div>
+                        </div>
+
+                        <div class="numberDrink">
+                            <p>
+                                White wine:
+                                <input class="numberWhiteWineInput" type="number" value="0" readOnly/>
+                            </p>
+                            <div class="numberPlusMinus">
+                                <i class="fas fa-plus-circle numberPlus WhiteWinePlus"></i>
+                                <i class="fas fa-minus-circle numberMinus WhiteWineMinus"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="order">
