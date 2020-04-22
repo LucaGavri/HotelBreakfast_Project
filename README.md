@@ -1,10 +1,14 @@
 #hello. site is in progress
+
 #HotelBreakfast 
 Breakfast ordering system for hotels. 
 Based on HTML, CSS, JS, Json API
 
-###Author
+##Author
 Łukasz Gawryś
+
+###Link to site
+https://lucagavri.github.io/HotelBreakfast_Project/index.html
 
 ###What is it?
 Client can order a breakfast from his room. 
