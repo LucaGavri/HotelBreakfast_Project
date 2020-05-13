@@ -1,5 +1,5 @@
 //alert
-alert('hello! This site is in progress. Back in a few days if you want to see all functionalities ;)');
+// alert('hello! This site is in progress. Back in a few days if you want to see all functionalities ;)');
 
 //miniatures click
 const cerealsMin = document.querySelector('.cerealsMin');
@@ -271,5 +271,46 @@ whiteWineMinus.addEventListener('click', function (e) {
     numberWhiteWineInput.stepDown(1);
 });
 
+//cart
 
+const cartList = document.querySelector('.toOrderCart');
 
+    //adding to cart
+    //cereals
+
+const cerealsAdd = document.querySelector('.numberCerealsInput');
+const cerealsAddBtn = document.querySelector('.cerealsMax .orderBtn');
+
+cerealsAddBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var cerealsToList = document.createElement("p");
+    cerealsToList.classList.add('cerealsToList');
+    cerealsToList.innerHTML = "Cereals with fresh fruits x " + cerealsAdd.value + " " + '<i class="fas fa-times"></i>';
+    cartList.appendChild(cerealsToList.cloneNode(true));
+});
+
+    //scrambled eggs
+
+const scrambledEggsAdd = document.querySelector('.numberScrambledEggsInput');
+const scrambledEggsAddBtn = document.querySelector('.scrambledEggsMax .orderBtn');
+
+scrambledEggsAddBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var scrambledEggsToList = document.createElement("p");
+    scrambledEggsToList.classList.add('scrambledEggsToList');
+    scrambledEggsToList.innerHTML = "Scrambled eggs with toast bread x " + scrambledEggsAdd.value + " " + '<i class="fas fa-times"></i>';
+    cartList.appendChild(scrambledEggsToList.cloneNode(true));
+});
+
+    //fried egg
+
+const friedEggAdd = document.querySelector('.numberFriedEggInput');
+const friedEggAddBtn = document.querySelector('.friedEggMax .orderBtn');
+
+friedEggAddBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var friedEggToList = document.createElement("p");
+    friedEggToList.classList.add('scrambledEggsToList');
+    friedEggToList.innerHTML = "Fried eggs with bacon x " + friedEggAdd.value + " " + '<i class="fas fa-times"></i>';
+    cartList.appendChild(friedEggToList.cloneNode(true));
+});
