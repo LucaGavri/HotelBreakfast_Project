@@ -243,13 +243,13 @@ section {
         color: #036000;
         font-size: 20px;
         cursor: pointer;
+        z-index: 10;
       }
 
       .imgAndDescription {
         overflow-y: scroll;
         padding: 20px;
         width: calc(100% - 40px);
-
 
         img {
           float: left;
@@ -462,6 +462,107 @@ section {
       text-decoration: none;
       color: #036000;
       transition: 0.5s all;
+    }
+  }
+}
+
+@media (max-width:700px){
+  section{
+
+    .sectionMealsDetails{
+
+      .maxi{
+
+        .imgAndDescription {
+          padding: 10px;
+          width: calc(100% - 20px);
+
+          img {
+            position: relative;
+            left: calc(50% - 150px);
+            float: none;
+            margin: 0;
+          }
+
+          h3 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:500px){
+  header{
+    .headerRoomNr{
+      font-size: 16px;
+      margin: 0 8px;
+    }
+  }
+
+  section{
+
+    .sectionMealsDetails{
+
+      .maxi{
+        width: 90%;
+        height: 90%;
+
+        i{
+          right: 7px;
+        }
+
+        .imgAndDescription {
+
+          img {
+            width: 240px;
+            height: 160px;
+            left: calc(50% - 120px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:380px){
+  section{
+    .sectionMain{
+
+      .sectionMealsMiniatures{
+
+        .mini{
+          width: 240px;
+          height: 160px;
+          min-width: 240px;
+          min-height: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height:500px){
+  section{
+
+    .sectionMealsDetails{
+
+      .maxi{
+        height: 90%;
+        width: 90%;
+
+        .imgAndDescription {
+
+          img{
+            display: none;
+          }
+        }
+      }
     }
   }
 }
