@@ -1,5 +1,5 @@
 //alert
-// alert('hello! This site is in progress. Back in a few days if you want to see all functionalities ;)');
+alert('hello! This site is in progress. Back in a few days if you want to see all functionalities ;)');
 
 //miniatures click
 const cerealsMin = document.querySelector('.cerealsMin');
