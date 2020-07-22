@@ -249,14 +249,6 @@ redWinePlus.addEventListener('click', function (e) {
     numberRedWineInput.stepUp(1);
 });
 
-cottageCheesePlus.addEventListener('click', function (e) {
-    (e).preventDefault();
-    numberCottageCheeseInput.stepUp(1);
-});
-cottageCheeseMinus.addEventListener('click', function (e) {
-    (e).preventDefault();
-    numberCottageCheeseInput.stepDown(1);
-});
 redWineMinus.addEventListener('click', function (e) {
     (e).preventDefault();
     numberRedWineInput.stepDown(1);
@@ -275,42 +267,80 @@ whiteWineMinus.addEventListener('click', function (e) {
 
 const cartList = document.querySelector('.toOrderCart');
 
-    //adding to cart
-    //cereals
+//adding to cart
+//cereals
 
 const cerealsAdd = document.querySelector('.numberCerealsInput');
 const cerealsAddBtn = document.querySelector('.cerealsMax .orderBtn');
 
 cerealsAddBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    var cerealsToList = document.createElement("p");
-    cerealsToList.classList.add('cerealsToList');
-    cerealsToList.innerHTML = "Cereals with fresh fruits x " + cerealsAdd.value + " " + '<i class="fas fa-times"></i>';
-    cartList.appendChild(cerealsToList.cloneNode(true));
+    if(cerealsAdd.value > 0) {
+        e.preventDefault();
+        var cerealsToList = document.createElement("p");
+        cerealsToList.classList.add('cerealsToList');
+        cerealsToList.innerHTML = "Cereals with fresh fruits x " + cerealsAdd.value + " " + '<i class="fas fa-times"></i>';
+        cartList.appendChild(cerealsToList.cloneNode(true));
+    }
 });
 
-    //scrambled eggs
+//scrambled eggs
 
 const scrambledEggsAdd = document.querySelector('.numberScrambledEggsInput');
 const scrambledEggsAddBtn = document.querySelector('.scrambledEggsMax .orderBtn');
 
 scrambledEggsAddBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    var scrambledEggsToList = document.createElement("p");
-    scrambledEggsToList.classList.add('scrambledEggsToList');
-    scrambledEggsToList.innerHTML = "Scrambled eggs with toast bread x " + scrambledEggsAdd.value + " " + '<i class="fas fa-times"></i>';
-    cartList.appendChild(scrambledEggsToList.cloneNode(true));
+    if(scrambledEggsAdd.value > 0) {
+        e.preventDefault();
+        var scrambledEggsToList = document.createElement("p");
+        scrambledEggsToList.classList.add('scrambledEggsToList');
+        scrambledEggsToList.innerHTML = "Scrambled eggs with toast bread x " + scrambledEggsAdd.value + " " + '<i class="fas fa-times"></i>';
+        cartList.appendChild(scrambledEggsToList.cloneNode(true));
+    }
 });
 
-    //fried egg
+//fried egg
 
 const friedEggAdd = document.querySelector('.numberFriedEggInput');
 const friedEggAddBtn = document.querySelector('.friedEggMax .orderBtn');
 
 friedEggAddBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    var friedEggToList = document.createElement("p");
-    friedEggToList.classList.add('scrambledEggsToList');
-    friedEggToList.innerHTML = "Fried eggs with bacon x " + friedEggAdd.value + " " + '<i class="fas fa-times"></i>';
-    cartList.appendChild(friedEggToList.cloneNode(true));
+    if(friedEggAdd.value > 0) {
+        e.preventDefault();
+        var friedEggToList = document.createElement("p");
+        friedEggToList.classList.add('friedEggToList');
+        friedEggToList.innerHTML = "Fried eggs with bacon x " + friedEggAdd.value + " " + '<i class="fas fa-times"></i>';
+        cartList.appendChild(friedEggToList.cloneNode(true));
+    }
 });
+
+//pancakes
+
+const pancakesAdd = document.querySelector('.numberPancakesInput');
+const pancakesAddBtn = document.querySelector('.pancakesMax .orderBtn');
+
+pancakesAddBtn.addEventListener('click', function (e) {
+    if(pancakesAdd.value > 0) {
+        e.preventDefault();
+        var pancakesToList = document.createElement("p");
+        pancakesToList.classList.add('pancakesToList');
+        pancakesToList.innerHTML = "Pancakes x " + pancakesAdd.value + " " + '<i class="fas fa-times"></i>';
+        cartList.appendChild(pancakesToList.cloneNode(true));
+    }
+});
+
+//cottage cheese
+
+const cottageCheeseAdd = document.querySelector('.numberCottageCheeseInput');
+const cottageCheeseAddBtn = document.querySelector('.cottageCheeseMax .orderBtn');
+
+cottageCheeseAddBtn.addEventListener('click', function (e) {
+    if (cottageCheeseAdd.value > 0) {
+        e.preventDefault();
+        var cottageCheeseToList = document.createElement("p");
+        cottageCheeseToList.classList.add('cottageCheeseToList');
+        cottageCheeseToList.innerHTML = "Cottage cheese with radish and chives x " + cottageCheeseAdd.value + " " + '<i class="fas fa-times"></i>';
+        cartList.appendChild(cottageCheeseToList.cloneNode(true));
+    }
+});
+
+
