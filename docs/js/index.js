@@ -275,7 +275,7 @@ const cerealsAddBtn = document.querySelector('.cerealsMax .orderBtn');
 const cerealsProdAdded = document.querySelector('.cerealsMax .productAdded');
 
 cerealsAddBtn.addEventListener('click', function (e) {
-    if(cerealsAdd.value > 0) {
+    if (cerealsAdd.value > 0) {
         e.preventDefault();
         var cerealsToList = document.createElement("p");
         cerealsToList.classList.add('cerealsToList');
@@ -294,7 +294,7 @@ const scrambledEggsAddBtn = document.querySelector('.scrambledEggsMax .orderBtn'
 const scrambledEggsProdAdded = document.querySelector('.scrambledEggsMax .productAdded');
 
 scrambledEggsAddBtn.addEventListener('click', function (e) {
-    if(scrambledEggsAdd.value > 0) {
+    if (scrambledEggsAdd.value > 0) {
         e.preventDefault();
         var scrambledEggsToList = document.createElement("p");
         scrambledEggsToList.classList.add('scrambledEggsToList');
@@ -313,7 +313,7 @@ const friedEggAddBtn = document.querySelector('.friedEggMax .orderBtn');
 const friedEggProdAdded = document.querySelector('.friedEggMax .productAdded');
 
 friedEggAddBtn.addEventListener('click', function (e) {
-    if(friedEggAdd.value > 0) {
+    if (friedEggAdd.value > 0) {
         e.preventDefault();
         var friedEggToList = document.createElement("p");
         friedEggToList.classList.add('friedEggToList');
@@ -332,7 +332,7 @@ const pancakesAddBtn = document.querySelector('.pancakesMax .orderBtn');
 const pancakesProdAdded = document.querySelector('.pancakesMax .productAdded');
 
 pancakesAddBtn.addEventListener('click', function (e) {
-    if(pancakesAdd.value > 0) {
+    if (pancakesAdd.value > 0) {
         e.preventDefault();
         var pancakesToList = document.createElement("p");
         pancakesToList.classList.add('pancakesToList');
@@ -373,7 +373,6 @@ const cocoaAdd = document.querySelector('.numberCocoaInput');
 const waterAdd = document.querySelector('.numberWaterInput');
 const redWineAdd = document.querySelector('.numberRedWineInput');
 const whiteWineAdd = document.querySelector('.numberWhiteWineInput');
-
 
 
 drinkAddBtn.addEventListener('click', function (e) {
@@ -466,3 +465,12 @@ drinkAddBtn.addEventListener('click', function (e) {
     drinkProdAdded.style.display = 'flex';
     window.setTimeout("drinkProdAdded.style.display ='none'", 2000);
 });
+
+//removing from cart
+// const removeCartBtns = document.querySelector('.toOrderCart .whiteWineToList .fas');
+//
+// removeCartBtns.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     console.log('dsd');
+// });
+
