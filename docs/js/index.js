@@ -389,6 +389,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         }
     };
     blackTeaF();
+
     //green tea
     var greenTeaF = function () {
         if (greenTeaAdd.value > 0) {
@@ -400,6 +401,68 @@ drinkAddBtn.addEventListener('click', function (e) {
         }
     };
     greenTeaF();
+
+    //coffee
+    var coffeeF = function () {
+        if (coffeeAdd.value > 0) {
+            var coffeeToList = document.createElement("p");
+            coffeeToList.classList.add('coffeeToList');
+            coffeeToList.innerHTML = "Coffee x " + coffeeAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(coffeeToList.cloneNode(true));
+            coffeeAdd.value = 0;
+        }
+    };
+    coffeeF();
+
+    //cocoa
+    var cocoaF = function () {
+        if (cocoaAdd.value > 0) {
+            var cocoaToList = document.createElement("p");
+            cocoaToList.classList.add('cocoaToList');
+            cocoaToList.innerHTML = "Cocoa x " + cocoaAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(cocoaToList.cloneNode(true));
+            cocoaAdd.value = 0;
+        }
+    };
+    cocoaF();
+
+    //water
+    var waterF = function () {
+        if (waterAdd.value > 0) {
+            var waterToList = document.createElement("p");
+            waterToList.classList.add('waterToList');
+            waterToList.innerHTML = "Water x " + waterAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(waterToList.cloneNode(true));
+            waterAdd.value = 0;
+        }
+    };
+    waterF();
+
+    //red wine
+    var redWineF = function () {
+        if (redWineAdd.value > 0) {
+            var redWineToList = document.createElement("p");
+            redWineToList.classList.add('redWineToList');
+            redWineToList.innerHTML = "Red wine x " + redWineAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(redWineToList.cloneNode(true));
+            redWineAdd.value = 0;
+        }
+    };
+    redWineF();
+
+    //white wine
+    var whiteWineF = function () {
+        if (whiteWineAdd.value > 0) {
+            var whiteWineToList = document.createElement("p");
+            whiteWineToList.classList.add('whiteWineToList');
+            whiteWineToList.innerHTML = "White wine x " + whiteWineAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(whiteWineToList.cloneNode(true));
+            whiteWineAdd.value = 0;
+        }
+    };
+    whiteWineF();
+
+    //add anim
     drinkProdAdded.style.display = 'flex';
     window.setTimeout("drinkProdAdded.style.display ='none'", 2000);
 });
