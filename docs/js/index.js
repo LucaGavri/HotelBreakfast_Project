@@ -1,5 +1,5 @@
 //alert
-alert('hello! This site is in progress. Back in a few days if you want to see all functionalities ;)');
+// alert('hello! This site is in progress. Back in a few days if you want to see all functionalities ;)');
 
 //miniatures click
 const cerealsMin = document.querySelector('.cerealsMin');
@@ -283,7 +283,7 @@ cerealsAddBtn.addEventListener('click', function (e) {
         cartList.appendChild(cerealsToList.cloneNode(true));
         cerealsAdd.value = 0;
         cerealsProdAdded.style.display = 'flex';
-        window.setTimeout("cerealsProdAdded.style.display ='none'", 3000);
+        window.setTimeout("cerealsProdAdded.style.display ='none'", 2000);
     }
 });
 
@@ -302,7 +302,7 @@ scrambledEggsAddBtn.addEventListener('click', function (e) {
         cartList.appendChild(scrambledEggsToList.cloneNode(true));
         scrambledEggsAdd.value = 0;
         scrambledEggsProdAdded.style.display = 'flex';
-        window.setTimeout("scrambledEggsProdAdded.style.display ='none'", 3000);
+        window.setTimeout("scrambledEggsProdAdded.style.display ='none'", 2000);
     }
 });
 
@@ -321,7 +321,7 @@ friedEggAddBtn.addEventListener('click', function (e) {
         cartList.appendChild(friedEggToList.cloneNode(true));
         friedEggAdd.value = 0;
         friedEggProdAdded.style.display = 'flex';
-        window.setTimeout("friedEggProdAdded.style.display ='none'", 3000);
+        window.setTimeout("friedEggProdAdded.style.display ='none'", 2000);
     }
 });
 
@@ -340,7 +340,7 @@ pancakesAddBtn.addEventListener('click', function (e) {
         cartList.appendChild(pancakesToList.cloneNode(true));
         pancakesAdd.value = 0;
         pancakesProdAdded.style.display = 'flex';
-        window.setTimeout("pancakesProdAdded.style.display ='none'", 3000);
+        window.setTimeout("pancakesProdAdded.style.display ='none'", 2000);
     }
 });
 
@@ -359,8 +359,47 @@ cottageCheeseAddBtn.addEventListener('click', function (e) {
         cartList.appendChild(cottageCheeseToList.cloneNode(true));
         cottageCheeseAdd.value = 0;
         cottageCheeseProdAdded.style.display = 'flex';
-        window.setTimeout("cottageCheeseProdAdded.style.display ='none'", 3000);
+        window.setTimeout("cottageCheeseProdAdded.style.display ='none'", 2000);
     }
 });
 
+//drinks
+const drinkAddBtn = document.querySelector('.drinkMax .order .orderBtn');
+const drinkProdAdded = document.querySelector('.drinkMax .productAdded');
+const blackTeaAdd = document.querySelector('.numberBlackTeaInput');
+const greenTeaAdd = document.querySelector('.numberGreenTeaInput');
+const coffeeAdd = document.querySelector('.numberCoffeeInput');
+const cocoaAdd = document.querySelector('.numberCocoaInput');
+const waterAdd = document.querySelector('.numberWaterInput');
+const redWineAdd = document.querySelector('.numberRedWineInput');
+const whiteWineAdd = document.querySelector('.numberWhiteWineInput');
 
+
+
+drinkAddBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    //black tea
+    var blackTeaF = function () {
+        if (blackTeaAdd.value > 0) {
+            var blackTeaToList = document.createElement("p");
+            blackTeaToList.classList.add('blackTeaToList');
+            blackTeaToList.innerHTML = "Black tea x " + blackTeaAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(blackTeaToList.cloneNode(true));
+            blackTeaAdd.value = 0;
+        }
+    };
+    blackTeaF();
+    //green tea
+    var greenTeaF = function () {
+        if (greenTeaAdd.value > 0) {
+            var greenTeaToList = document.createElement("p");
+            greenTeaToList.classList.add('greenTeaToList');
+            greenTeaToList.innerHTML = "Green tea x " + greenTeaAdd.value + " " + '<i class="fas fa-times"></i>';
+            cartList.appendChild(greenTeaToList.cloneNode(true));
+            greenTeaAdd.value = 0;
+        }
+    };
+    greenTeaF();
+    drinkProdAdded.style.display = 'flex';
+    window.setTimeout("drinkProdAdded.style.display ='none'", 2000);
+});
