@@ -279,7 +279,7 @@ cerealsAddBtn.addEventListener('click', function (e) {
         e.preventDefault();
         var cerealsToList = document.createElement("p");
         cerealsToList.classList.add('cerealsToList');
-        cerealsToList.innerHTML = "Cereals with fresh fruits x " + cerealsAdd.value + " " + '<i class="fas fa-times"></i>';
+        cerealsToList.innerHTML = "Cereals with fresh fruits x " + cerealsAdd.value + " " + '<i class="fas fa-times remove"></i>';
         cartList.appendChild(cerealsToList.cloneNode(true));
         cerealsAdd.value = 0;
         cerealsProdAdded.style.display = 'flex';
@@ -298,7 +298,7 @@ scrambledEggsAddBtn.addEventListener('click', function (e) {
         e.preventDefault();
         var scrambledEggsToList = document.createElement("p");
         scrambledEggsToList.classList.add('scrambledEggsToList');
-        scrambledEggsToList.innerHTML = "Scrambled eggs with toast bread x " + scrambledEggsAdd.value + " " + '<i class="fas fa-times"></i>';
+        scrambledEggsToList.innerHTML = "Scrambled eggs with toast bread x " + scrambledEggsAdd.value + " " + '<i class="fas fa-times remove"></i>';
         cartList.appendChild(scrambledEggsToList.cloneNode(true));
         scrambledEggsAdd.value = 0;
         scrambledEggsProdAdded.style.display = 'flex';
@@ -317,7 +317,7 @@ friedEggAddBtn.addEventListener('click', function (e) {
         e.preventDefault();
         var friedEggToList = document.createElement("p");
         friedEggToList.classList.add('friedEggToList');
-        friedEggToList.innerHTML = "Fried eggs with bacon x " + friedEggAdd.value + " " + '<i class="fas fa-times"></i>';
+        friedEggToList.innerHTML = "Fried eggs with bacon x " + friedEggAdd.value + " " + '<i class="fas fa-times remove"></i>';
         cartList.appendChild(friedEggToList.cloneNode(true));
         friedEggAdd.value = 0;
         friedEggProdAdded.style.display = 'flex';
@@ -336,7 +336,7 @@ pancakesAddBtn.addEventListener('click', function (e) {
         e.preventDefault();
         var pancakesToList = document.createElement("p");
         pancakesToList.classList.add('pancakesToList');
-        pancakesToList.innerHTML = "Pancakes with maple syrup x " + pancakesAdd.value + " " + '<i class="fas fa-times"></i>';
+        pancakesToList.innerHTML = "Pancakes with maple syrup x " + pancakesAdd.value + " " + '<i class="fas fa-times remove"></i>';
         cartList.appendChild(pancakesToList.cloneNode(true));
         pancakesAdd.value = 0;
         pancakesProdAdded.style.display = 'flex';
@@ -355,7 +355,7 @@ cottageCheeseAddBtn.addEventListener('click', function (e) {
         e.preventDefault();
         var cottageCheeseToList = document.createElement("p");
         cottageCheeseToList.classList.add('cottageCheeseToList');
-        cottageCheeseToList.innerHTML = "Cottage cheese with radish and chives x " + cottageCheeseAdd.value + " " + '<i class="fas fa-times"></i>';
+        cottageCheeseToList.innerHTML = "Cottage cheese with radish and chives x " + cottageCheeseAdd.value + " " + '<i class="fas fa-times remove"></i>';
         cartList.appendChild(cottageCheeseToList.cloneNode(true));
         cottageCheeseAdd.value = 0;
         cottageCheeseProdAdded.style.display = 'flex';
@@ -382,7 +382,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (blackTeaAdd.value > 0) {
             var blackTeaToList = document.createElement("p");
             blackTeaToList.classList.add('blackTeaToList');
-            blackTeaToList.innerHTML = "Black tea x " + blackTeaAdd.value + " " + '<i class="fas fa-times"></i>';
+            blackTeaToList.innerHTML = "Black tea x " + blackTeaAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(blackTeaToList.cloneNode(true));
             blackTeaAdd.value = 0;
         }
@@ -394,7 +394,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (greenTeaAdd.value > 0) {
             var greenTeaToList = document.createElement("p");
             greenTeaToList.classList.add('greenTeaToList');
-            greenTeaToList.innerHTML = "Green tea x " + greenTeaAdd.value + " " + '<i class="fas fa-times"></i>';
+            greenTeaToList.innerHTML = "Green tea x " + greenTeaAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(greenTeaToList.cloneNode(true));
             greenTeaAdd.value = 0;
         }
@@ -406,7 +406,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (coffeeAdd.value > 0) {
             var coffeeToList = document.createElement("p");
             coffeeToList.classList.add('coffeeToList');
-            coffeeToList.innerHTML = "Coffee x " + coffeeAdd.value + " " + '<i class="fas fa-times"></i>';
+            coffeeToList.innerHTML = "Coffee x " + coffeeAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(coffeeToList.cloneNode(true));
             coffeeAdd.value = 0;
         }
@@ -418,7 +418,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (cocoaAdd.value > 0) {
             var cocoaToList = document.createElement("p");
             cocoaToList.classList.add('cocoaToList');
-            cocoaToList.innerHTML = "Cocoa x " + cocoaAdd.value + " " + '<i class="fas fa-times"></i>';
+            cocoaToList.innerHTML = "Cocoa x " + cocoaAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(cocoaToList.cloneNode(true));
             cocoaAdd.value = 0;
         }
@@ -430,7 +430,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (waterAdd.value > 0) {
             var waterToList = document.createElement("p");
             waterToList.classList.add('waterToList');
-            waterToList.innerHTML = "Water x " + waterAdd.value + " " + '<i class="fas fa-times"></i>';
+            waterToList.innerHTML = "Water x " + waterAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(waterToList.cloneNode(true));
             waterAdd.value = 0;
         }
@@ -442,7 +442,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (redWineAdd.value > 0) {
             var redWineToList = document.createElement("p");
             redWineToList.classList.add('redWineToList');
-            redWineToList.innerHTML = "Red wine x " + redWineAdd.value + " " + '<i class="fas fa-times"></i>';
+            redWineToList.innerHTML = "Red wine x " + redWineAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(redWineToList.cloneNode(true));
             redWineAdd.value = 0;
         }
@@ -454,7 +454,7 @@ drinkAddBtn.addEventListener('click', function (e) {
         if (whiteWineAdd.value > 0) {
             var whiteWineToList = document.createElement("p");
             whiteWineToList.classList.add('whiteWineToList');
-            whiteWineToList.innerHTML = "White wine x " + whiteWineAdd.value + " " + '<i class="fas fa-times"></i>';
+            whiteWineToList.innerHTML = "White wine x " + whiteWineAdd.value + " " + '<i class="fas fa-times remove"></i>';
             cartList.appendChild(whiteWineToList.cloneNode(true));
             whiteWineAdd.value = 0;
         }
@@ -467,10 +467,13 @@ drinkAddBtn.addEventListener('click', function (e) {
 });
 
 //removing from cart
-// const removeCartBtns = document.querySelector('.toOrderCart .whiteWineToList .fas');
-//
-// removeCartBtns.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     console.log('dsd');
-// });
 
+function removeFromList(e){
+  if(e.target.classList.contains('remove')){
+      e.target.parentElement.remove();
+  }
+}
+
+cartList.addEventListener('click', removeFromList);
+
+//making order
