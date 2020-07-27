@@ -21,60 +21,569 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;
 }
-.log{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #036000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  .logSquare{
-    background: #fff;
-    width: 300px;
-    height: 300px;
-    border-radius: 30px;
+header {
+  width: 100vw;
+  height: 65px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  .headerLogo {
+    width: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    box-shadow: 5px 5px 20px #111;
+  }
 
-    h2{
-      color: #036000;
-      font-size: 20px;
-      width: 80%;
-      text-align: center;
-    }
+  .headerRoomNr {
+    margin: 0 15px;
+    color: #036000;
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+}
 
-    .login{
-      height: 30px;
-      width: 60%;
-      margin: 10px 0;
-      border-radius: 10px;
-      text-align: center;
-    }
+section {
+  width: 100vw;
+  display: block;
 
-    .pass{
-      height: 30px;
-      width: 60%;
-      margin: 10px 0;
-      border-radius: 10px;
-      text-align: center;
-    }
+  .sectionMain {
+    margin: 65px 0 0 0;
+    width: 100%;
+    min-height: calc(100vh - 95px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-    .logBtn{
-      background-color: #036000;
-      color: #fff;
-      width: 80px;
-      height: 40px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
+    .sectionMealsMiniatures {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .cerealsMin {
+        background-image: url("../images/cereals.jpeg");
+        background-size: contain;
+      }
+
+      .scrambledEggsMin {
+        background-image: url("../images/scrambledEggs.jpg");
+        background-size: contain;
+      }
+
+      .friedEggMin {
+        background-image: url("../images/friedEgg.jpeg");
+        background-size: contain;
+      }
+
+      .pancakesMin {
+        background-image: url("../images/pancakes.jpeg");
+        background-size: contain;
+      }
+
+      .cottageCheeseMin {
+        background-image: url("../images/cottageCheese.jpg");
+        background-size: contain;
+      }
+
+      .drinkMin {
+        background-image: url("../images/drink.jpg");
+        background-size: contain;
+      }
+
+      .mini {
+        margin: 20px;
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px #444;
+        color: white;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+          content: 'click for details';
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #444;
+          opacity: 0;
+          position: absolute;
+          transition: 0.5s all;
+        }
+
+        &:hover:after {
+          opacity: 0.8;
+        }
+      }
     }
   }
 
+  .sectionMealsDetails {
+    width: 100%;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top: 65px;
+    left: 0;
+    background-color: rgba(3, 96, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    .cerealsMax {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .scrambledEggsMax {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .friedEggMax {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pancakesMax {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cottageCheeseMax {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drinkMax {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .imgAndDescription {
+
+        .descriptionDrink {
+          width: 170px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+
+          .numberDrink {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+
+              input {
+                text-align: center;
+                border-radius: 10px;
+                width: 30px;
+              }
+            }
+
+            .numberPlusMinus{
+              width: 40px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .numberPlus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+
+              .numberMinus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .maxi {
+      width: 80%;
+      height: 80%;
+      background-color: #fff;
+      border-radius: 5px;
+      position: relative;
+
+      .productAdded {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(30, 30, 30, 0.9);
+        border-radius: 5px;
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+
+        p{
+          color: #eeeeee;
+          font-size: 20px;
+        }
+
+      }
+
+      i {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #036000;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      .imgAndDescription {
+        overflow-y: scroll;
+        padding: 20px;
+        width: calc(100% - 40px);
+
+        img {
+          float: left;
+          width: 300px;
+          height: 200px;
+          margin: 0 30px 30px 0;
+        }
+
+        h3 {
+          margin: 0;
+          color: #036000;
+          font-size: 22px;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .order {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .quantity {
+          width: 150px;
+
+          .number {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+
+              input {
+                width: 30px;
+                border-radius: 10px;
+                text-align: center;
+              }
+            }
+
+            .numberPlusMinus{
+              width: 40px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .numberPlus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+
+              .numberMinus{
+                position: initial;
+                font-size: 16px;
+                color: #036000;
+              }
+            }
+          }
+        }
+
+        .orderBtn {
+          margin-top: 10px;
+          width: 120px;
+          height: 40px;
+          background-color: #036000;
+          border-radius: 5px;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .sectionCart {
+    width: 100vw;
+    height: calc(100vh - 65px);
+    position: fixed;
+    top: 65px;
+    left: 100vw;
+    background-color: rgba(3, 96, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: 1s all;
+
+    .showCart {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px 0 0 10px;
+      top: 0;
+      left: -40px;
+      background-color: rgba(3, 96, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.5s all;
+
+      &:hover {
+        color: #444;
+      }
+    }
+
+    .hideCart {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0;
+      left: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.5s all;
+
+      &:hover {
+        color: #444;
+      }
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .mainCart {
+      height: 80%;
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow-y: scroll;
+
+      h3 {
+        color: #036000;
+      }
+
+      .toOrderCart {
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            margin-left: 10px;
+            font-size: 20px;
+            color: #af0000;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .orderFinalBtn {
+        margin: 10px;
+        width: 110px;
+        height: 35px;
+        border: 3px solid #036000;
+        background-color: #036000;
+        border-radius: 5px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s all;
+
+        &:hover {
+          color: #036000;
+          background-color: #fff;
+          border: 3px solid #036000;
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  width: 100vw;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px #444;
+
+  p {
+    font-size: 12px;
+    text-align: center;
+    color: #444;
+
+    a {
+      text-decoration: none;
+      color: #036000;
+      transition: 0.5s all;
+    }
+  }
+}
+
+@media (max-width:700px){
+  section{
+
+    .sectionMealsDetails{
+
+      .maxi{
+
+        .imgAndDescription {
+          padding: 10px;
+          width: calc(100% - 20px);
+
+          img {
+            position: relative;
+            left: calc(50% - 150px);
+            float: none;
+            margin: 0;
+          }
+
+          h3 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:500px){
+  header{
+    .headerRoomNr{
+      font-size: 16px;
+      margin: 0 8px;
+    }
+  }
+
+  section{
+
+    .sectionMealsDetails{
+
+      .maxi{
+        width: 90%;
+        height: 90%;
+
+        i{
+          right: 7px;
+        }
+
+        .imgAndDescription {
+
+          img {
+            width: 240px;
+            height: 160px;
+            left: calc(50% - 120px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:380px){
+  section{
+    .sectionMain{
+
+      .sectionMealsMiniatures{
+
+        .mini{
+          width: 240px;
+          height: 160px;
+          min-width: 240px;
+          min-height: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-height:500px){
+  section{
+
+    .sectionMealsDetails{
+
+      .maxi{
+        height: 90%;
+        width: 90%;
+
+        .imgAndDescription {
+
+          img{
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
